@@ -1,19 +1,23 @@
-﻿using CSharpFundamentals.Math;
+﻿using System;
 
-namespace CSharpFundamentals
+namespace ReferenceTypes
 {
-    class MainClass
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var john = new Person();
-            john.FirstName = "John";
-            john.LastName = "Smith";
-            john.Introduce();
+            
+            var a = 10;
+            var b = 11;
+            b++;
 
-            Calculator calculator = new Calculator();
-            var result = calculator.Add(1, 2);
-            System.Console.WriteLine(result);
+            System.Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+
+            var array1 = new int[3]{1, 2, 3};
+            var array2 = array1;
+            array2[0] = 0;
+            System.Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+
         }
     }
 }
